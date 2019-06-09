@@ -27,9 +27,11 @@
 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-site-plugin</artifactId>
+			    <version>3.7.1</version>
 			    <configuration>
 			        <skip>false</skip>
 			        <skipDeploy>false</skipDeploy>
+			        <chmod>false</chmod>			        
 			    </configuration>
 			</plugin>			
 			<plugin>
@@ -200,7 +202,7 @@
 		</plugins>
 	</build>
 	
-	<url>https://www.nasdanika.org/products/${siteDir}</url>
+	<url>https://www.nasdanika.org/home/products/${siteDir}</url>
 	<distributionManagement>
 		<site>
 			<id>nasdanika-org</id>
