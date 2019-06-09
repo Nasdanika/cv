@@ -6,14 +6,13 @@
   <body>
  
     <breadcrumbs>
-      <item name="Nasdanika" href="../../site/current/index.html"/>
-      <item name="Bank" href="index.html"/>
+      <item name="Nasdanika" href="../../index.html"/>
+      <item name="CV" href="index.html"/>
     </breadcrumbs>
  
    <menu name="Main">
       <item name="Overview" href="index.html" />
-      <item name="Model Documentation" href="../html/tests/dumps/ecore/index.html" />
-      <!-- <item name="User Stories" href="storydoc/index.html" /> -->
+      <item name="Model Documentation" href="model-doc/index.html" />
       <item name="Project information" href="project-info.html" />      
    </menu>
 
@@ -23,14 +22,16 @@
       <item name="Editor" href="apidocs/editor/index.html" />
    </menu>
    
+   <!--
    <menu name="Developer Guilde">
       <item name="Overview" href="guides/developer/index.html" />
    </menu>   
+   -->
    
    <menu name="Issues">
-      <item name="Roadmap" href="../../mantis/roadmap_page.php?project_id=14" />
-      <item name="All" href="../../mantis/view_all_bug_page.php?project_id=14" />
-      <item name="Change Log" href="../../mantis/changelog_page.php?project_id=14" />
+      <item name="Roadmap" href="../../../mantis/roadmap_page.php?project_id=23" />
+      <item name="All" href="../../../mantis/view_all_bug_page.php?project_id=23" />
+      <item name="Change Log" href="../../../mantis/changelog_page.php?project_id=23" />
    </menu>
  
    <footer><![CDATA[All rights reserved.]]></footer>
@@ -51,7 +52,7 @@
         <ribbonColor>gray</ribbonColor>
       </gitHub>
       <googleSearch>
-        <sitesearch>https://www.nasdanika.org/products/bank</sitesearch>
+        <sitesearch>https://www.nasdanika.org/products/cv</sitesearch>
       </googleSearch>      
     </fluidoSkin>
   </custom>

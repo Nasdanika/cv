@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-	
-	   <feature url="features/org.nasdanika.cv.feature_0.1.0.qualifier.jar" id="org.nasdanika.cv.feature" version="0.1.0.qualifier">
-	      <category name="org.nasdanika.bank.category"/>
-	   </feature>
+   <feature url="features/org.nasdanika.cv.feature_0.1.0.qualifier.jar" id="org.nasdanika.cv.feature" version="0.1.0.qualifier">
+      <category name="org.nasdanika.cv.category"/>
+   </feature>
    <category-def name="org.nasdanika.cv.category" label="Nasdanika CV">
       <description>
-         org.nasdanika.bank.
+         Nasdanika CV model and editor.
       </description>
    </category-def>
+   <repository-reference location="http://download.eclipse.org/releases/2019-03" enabled="true" />
+   <repository-reference location="http://https://www.nasdanika.org/home/products/core/repository" enabled="true" />
+   <repository-reference location="http://https://www.nasdanika.org/home/products/html/repository" enabled="true" />
+   <repository-reference location="http://https://www.nasdanika.org/home/products/maven-osgi/repository" enabled="true" />
+   <repository-reference location="http://https://www.nasdanika.org/home/products/third-party/repository" enabled="true" />
+   <repository-reference location="http://download.eclipse.org/tools/orbit/downloads/drops/R20181128170323/repository" enabled="true" />
 </site>

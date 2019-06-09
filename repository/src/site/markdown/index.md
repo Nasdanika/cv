@@ -1,61 +1,42 @@
-# Nasdanika Bank
+# Nasdanika CV
 
-Nasdanika bank is a simple enough ECore bank domain model to use for demonstration purposes in different Nasdanika products. 
+Nasdanika CV provides a model and an editor for creating cross-referenced [Curricula vitae](https://en.wikipedia.org/wiki/Curriculum_vitae) and publishing them as wed sites. 
+
+## Concepts 
+
+TODO - author, capbability tree, activity, organizations, ...
 
 ## Resources
 
-* [Model documentation](../html/tests/dumps/ecore/index.html)
+* [Model documentation](model-doc/index.html)
 * JavaDoc
     * [Model](apidocs/model)
     * [Edit](apidocs/model)
     * [Editor](apidocs/model)
 * [Sources](bank.zip)
-* [Nasdanika.bank](Nasdanika.bank) - a sample model with several customers, accounts and transactions. It is also available as a resource in ``org.nasdanika.bank`` bundle.    
+* [Sample CV](Sample.nsdcv) - a sample CV model.    
 
 ## P2 Repository
 
-* ``https://www.nasdanika.org/products/bank/1.0.0-SNAPSHOT/repository``
-* [Archived](org.nasdanika.bank.repository-1.0.0-SNAPSHOT.zip)
+* ``https://www.nasdanika.org/home/products/cv/repository``
+* [Archived](org.nasdanika.cv.repository-0.1.0-SNAPSHOT.zip)
 
 ## How to use
 
 ### Eclipse editor
 
-Install Nasdanika Bank feature. 
+Install Nasdanika CV feature. 
 
 #### New model
 
-* Select to New > Other > Nasdanika > Nasdanika Bank Model.
-* Select Bank as the root object.
+* Select to New > Other > Nasdanika > Nasdanika CV Model.
+* Select Author as the root object.
+* Right-click on the model elements to add sub-elements.
 
-#### Nasdanika.bank model
+#### Sample model
 
 * Download the model into an Eclipse project.
 * Double-click on the model to open the editor.
-
-
-### Load programmatically
-
-org.eclipse.emf.ecore.xmi
-
-```
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.nasdanika.bank.Bank;
-import org.nasdanika.bank.BankPackage;
-
-...
-
-ResourceSet resourceSet = new ResourceSetImpl();
-resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
-resourceSet.getPackageRegistry().put(BankPackage.eNS_URI, BankPackage.eINSTANCE);
-URI uri = URI.createPlatformPluginURI("org.nasdanika.bank/Nasdanika.bank", false);
-Resource resource = resourceSet.getResource(uri, true);
-Bank bank = (Bank) resource.getContents().iterator().next();
-```
 
 ## How to contribute
 

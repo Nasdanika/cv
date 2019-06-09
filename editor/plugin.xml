@@ -9,13 +9,13 @@
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated cv -->
       <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            id="org.nasdanika"
             name="%_UI_Wizard_category"/>
       <wizard
             id="org.nasdanika.cv.presentation.cvModelWizardID"
             name="%_UI_cvModelWizard_label"
             class="org.nasdanika.cv.presentation.CvModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            category="org.nasdanika"
             icon="icons/full/obj16/cvModelFile.gif">
          <description>%_UI_cvModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -28,7 +28,7 @@
             id="org.nasdanika.cv.presentation.cvEditorID"
             name="%_UI_cvEditor_label"
             icon="icons/full/obj16/cvModelFile.gif"
-            extensions="cv"
+            extensions="nsdcv"
             class="org.nasdanika.cv.presentation.CvEditor"
             contributorClass="org.nasdanika.cv.presentation.CvActionBarContributor">
       </editor>
