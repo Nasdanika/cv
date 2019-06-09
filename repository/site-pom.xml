@@ -8,6 +8,7 @@
 	<version>0.1.0-SNAPSHOT</version>
 	<properties>
 		<siteDir>cv/${project.version}/${env.CIRCLE_BRANCH}</siteDir>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	
 	<build>
@@ -127,6 +128,22 @@
 							<resources>
 								<resource>
 									<directory>${basedir}/target/products/org.nasdanika.cv.tests.product/linux/gtk/x86_64/target/model-doc</directory>
+									<filtering>false</filtering>
+								</resource>								
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-guides-developer</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/site/guides/developer</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/../guides/developer/target/site</directory>
 									<filtering>false</filtering>
 								</resource>								
 							</resources>

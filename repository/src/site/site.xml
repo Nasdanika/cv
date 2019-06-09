@@ -47,12 +47,12 @@
   <custom>
     <fluidoSkin>
       <gitHub>
-        <projectId>nasdanika/bank</projectId>
+        <projectId>nasdanika/cv</projectId>
         <ribbonOrientation>right</ribbonOrientation>
         <ribbonColor>gray</ribbonColor>
       </gitHub>
       <googleSearch>
-        <sitesearch>https://www.nasdanika.org/products/cv</sitesearch>
+        <sitesearch>https://www.nasdanika.org/home/products/cv</sitesearch>
       </googleSearch>      
     </fluidoSkin>
   </custom>

@@ -1,0 +1,46 @@
+<project name="Руководство разработчика">
+ 
+  <publishDate position="right"/>
+  <version position="right"/>
+
+  <bannerLeft>
+	<name>Руководство разработчика</name>
+  </bannerLeft>  
+  
+  <body>  
+ 
+    <breadcrumbs>
+      <item name="Nasdanika" href="../../../../../index.html"/>
+      <item name="CV" href="../../../index.html"/>
+      <item name="Руководство разработчика" href="index.html"/>
+    </breadcrumbs>
+ 
+   <menu name="Главная">
+      <item name="Содержание" href="index.html" />
+      <item name="Лорем ипсум" href="#" />
+   </menu>
+
+   <menu name="Установка">
+      <item name="Шаг 1" href="set-up/step-1/index.html" />
+      <item name="Шаг 2" href="set-up/step-2.html" />
+   </menu>
+ 
+   <footer><![CDATA[All rights reserved.]]></footer>
+ 
+  </body>    
+ 
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.7</version>
+  </skin>
+  
+  <custom>
+    <fluidoSkin>
+      <googleSearch>
+        <sitesearch>https://www.nasdanika.org/products/cv/guides/developer/ru</sitesearch>
+      </googleSearch>      
+    </fluidoSkin>
+  </custom>
+ 
+</project>
