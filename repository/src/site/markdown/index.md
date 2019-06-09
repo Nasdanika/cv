@@ -10,9 +10,9 @@ TODO - author, capbability tree, activity, organizations, ...
 
 * [Model documentation](model-doc/index.html)
 * JavaDoc
-    * [Model](apidocs/model)
-    * [Edit](apidocs/model)
-    * [Editor](apidocs/model)
+    * [Model](apidocs/org.nasdanika.cv)
+    * [Edit](apidocs/org.nasdanika.cv.edit)
+    * [Editor](apidocs/org.nasdanika.cv.editor)
 * [Sources](cv.zip)
 * [Sample CV](Sample.nsdcv) - a sample CV model.    
 

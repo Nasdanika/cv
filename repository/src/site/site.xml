@@ -17,9 +17,9 @@
    </menu>
 
    <menu name="Java API">
-      <item name="Model" href="apidocs/model/index.html" />
-      <item name="Edit" href="apidocs/edit/index.html" />
-      <item name="Editor" href="apidocs/editor/index.html" />
+      <item name="Model" href="apidocs/org.nasdanika.cv/index.html" />
+      <item name="Edit" href="apidocs/org.nasdanika.cv.edit/index.html" />
+      <item name="Editor" href="apidocs/org.nasdanika.cv.editor/index.html" />
    </menu>
    
    <!--
