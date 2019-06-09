@@ -43,6 +43,34 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions> 
+					<execution>
+						<id>build-distributions</id>
+						<goals>
+							<!-- install the product using the p2 director -->
+							<goal>materialize-products</goal>
+							<!-- create zip file with the installed product -->
+							<goal>archive-products</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<products>
+						
+						<product>
+							<id>org.nasdanika.cv.tests.product</id>
+						</product>
+						
+					</products>
+					<!-- global optional parameters (with default values) -->
+					<installFeatures>true</installFeatures>
+					<profile>DefaultProfile</profile>
+				</configuration>
+			</plugin>			
+			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.0.1</version>
 				<executions>
@@ -93,7 +121,7 @@
 							<outputDirectory>${basedir}/target/site/apidocs/org.nasdanika.cv</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/../org.nasdanika.cv/target/site/apidocs</directory>
+									<directory>${basedir}/../model/target/site/apidocs</directory>
 									<filtering>false</filtering>
 								</resource>								
 							</resources>
@@ -109,7 +137,7 @@
 							<outputDirectory>${basedir}/target/site/apidocs/org.nasdanika.cv.edit</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/../org.nasdanika.cv.edit/target/site/apidocs</directory>
+									<directory>${basedir}/../edit/target/site/apidocs</directory>
 									<filtering>false</filtering>
 								</resource>								
 							</resources>
@@ -125,7 +153,23 @@
 							<outputDirectory>${basedir}/target/site/apidocs/org.nasdanika.cv.editor</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/../org.nasdanika.cv.editor/target/site/apidocs</directory>
+									<directory>${basedir}/../editor/target/site/apidocs</directory>
+									<filtering>false</filtering>
+								</resource>								
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-model-doc</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/site/model-doc</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/target/products/org.nasdanika.cv.tests.product/linux/gtk/x86_64/target/model-doc</directory>
 									<filtering>false</filtering>
 								</resource>								
 							</resources>
@@ -140,7 +184,7 @@
 					<skipAssembly>false</skipAssembly>
 					<outputDirectory>${project.build.directory}/site</outputDirectory>
 					<formats>zip</formats>
-					<finalName>bank</finalName>
+					<finalName>cv</finalName>
 					<appendAssemblyId>false</appendAssemblyId>
 					<descriptors>
 						<descriptor>src/assembly/workspace.xml</descriptor>

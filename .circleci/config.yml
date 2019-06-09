@@ -28,16 +28,13 @@ jobs:
 
       # OSGi build
       - run: 
-            command: mvn -s .circleci/settings.xml clean javadoc:javadoc package site-deploy
+            command: mvn -s .circleci/settings.xml clean javadoc:javadoc package
             no_output_timeout: 120m
 
-      # Building tests
-      # - run: cd tests;mvn -s ../.circleci/settings.xml clean package
-
       # Executing tests
-      # - run: cd tests/repository/target/products/org.nasdanika.html.tests.product/linux/gtk/x86_64;./eclipse
+      - run: cd tests/repository/target/products/org.nasdanika.cv.tests.product/linux/gtk/x86_64;./eclipse
 
       # Deploying test results and dumps to the site
-      # - run: cd tests/site; mvn -s ../../.circleci/settings.xml site-deploy
+      - run: mvn -s .circleci/settings.xml site-deploy
             
 

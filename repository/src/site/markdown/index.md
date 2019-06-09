@@ -13,7 +13,7 @@ TODO - author, capbability tree, activity, organizations, ...
     * [Model](apidocs/model)
     * [Edit](apidocs/model)
     * [Editor](apidocs/model)
-* [Sources](bank.zip)
+* [Sources](cv.zip)
 * [Sample CV](Sample.nsdcv) - a sample CV model.    
 
 ## P2 Repository
