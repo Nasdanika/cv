@@ -1,10 +1,10 @@
-<project name="Developer Guide">
+<project name="Руководство пользователя">
  
   <publishDate position="right"/>
   <version position="right"/>
 
   <bannerLeft>
-	<name>Developer Guide</name>
+	<name>Руководство пользователя</name>
   </bannerLeft>  
   
   <body>  
@@ -12,17 +12,17 @@
     <breadcrumbs>
       <item name="Nasdanika" href="../../../../../index.html"/>
       <item name="CV" href="../../../index.html"/>
-      <item name="Developer Guide" href="index.html"/>
+      <item name="Руководство пользователя" href="index.html"/>
     </breadcrumbs>
  
-   <menu name="Main">
-      <item name="Overview" href="index.html" />
-      <item name="Lorem Impsum" href="#" />
+   <menu name="Главная">
+      <item name="Содержание" href="index.html" />
+      <item name="Лорем ипсум" href="#" />
    </menu>
 
-   <menu name="Set up">
-      <item name="Step 1" href="set-up/step-1/index.html" />
-      <item name="Step 2" href="set-up/step-2.html" />
+   <menu name="Установка">
+      <item name="Шаг 1" href="set-up/step-1/index.html" />
+      <item name="Шаг 2" href="set-up/step-2.html" />
    </menu>
  
    <footer><![CDATA[All rights reserved.]]></footer>
@@ -38,7 +38,7 @@
   <custom>
     <fluidoSkin>
       <googleSearch>
-        <sitesearch>https://www.nasdanika.org/products/cv/guides/developer</sitesearch>
+        <sitesearch>https://www.nasdanika.org/products/cv/guides/user/ru</sitesearch>
       </googleSearch>      
     </fluidoSkin>
   </custom>

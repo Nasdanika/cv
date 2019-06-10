@@ -149,6 +149,22 @@
 							</resources>
 						</configuration>
 					</execution>
+					<execution>
+						<id>copy-guides-user</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/site/guides/user</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/../guides/user/target/site</directory>
+									<filtering>false</filtering>
+								</resource>								
+							</resources>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>	
 			<plugin>

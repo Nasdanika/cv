@@ -35,6 +35,7 @@ jobs:
       - run: cd repository/target/products/org.nasdanika.cv.tests.product/linux/gtk/x86_64;./eclipse
 
       # Deploying sites
+      - run: cd guides/user;mvn -f pom.xml -s ../../.circleci/settings.xml site
       - run: cd guides/developer;mvn -f pom.xml -s ../../.circleci/settings.xml site
       - run: cd repository;mvn -f site-pom.xml -s ../.circleci/settings.xml site-deploy
             
