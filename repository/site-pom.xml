@@ -26,6 +26,7 @@
 			    <version>3.7.1</version>
 			    <configuration>
 			        <chmod>false</chmod>			        
+			        <locales>en,ru</locales>			        
 			    </configuration>
 			</plugin>			
 			<plugin>
