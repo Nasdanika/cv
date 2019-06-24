@@ -21,7 +21,7 @@ package org.nasdanika.cv;
  * </ul>
  *
  * @see org.nasdanika.cv.cvPackage#getPostalAddress()
- * @model
+ * @model annotation="urn:org.nasdanika label_ru='\u041f\u043e\u0447\u0442\u043e\u0432\u044b\u0439 \u0430\u0434\u0440\u0435\u0441'"
  * @generated
  */
 public interface PostalAddress extends ContactMethod {
@@ -32,7 +32,7 @@ public interface PostalAddress extends ContactMethod {
 	 * @return the value of the '<em>Country</em>' attribute.
 	 * @see #setCountry(String)
 	 * @see org.nasdanika.cv.cvPackage#getPostalAddress_Country()
-	 * @model
+	 * @model annotation="urn:org.nasdanika label_ru='\u0421\u0442\u0440\u0430\u043d\u0430'"
 	 * @generated
 	 */
 	String getCountry();
@@ -54,7 +54,7 @@ public interface PostalAddress extends ContactMethod {
 	 * @return the value of the '<em>State Province</em>' attribute.
 	 * @see #setStateProvince(String)
 	 * @see org.nasdanika.cv.cvPackage#getPostalAddress_StateProvince()
-	 * @model
+	 * @model annotation="urn:org.nasdanika label_ru='\u0428\u0442\u0430\u0442/\u043f\u0440\u043e\u0432\u0438\u043d\u0446\u0438\u044f/\u0440\u0435\u0433\u0438\u043e\u043d'"
 	 * @generated
 	 */
 	String getStateProvince();
@@ -76,7 +76,7 @@ public interface PostalAddress extends ContactMethod {
 	 * @return the value of the '<em>City</em>' attribute.
 	 * @see #setCity(String)
 	 * @see org.nasdanika.cv.cvPackage#getPostalAddress_City()
-	 * @model
+	 * @model annotation="urn:org.nasdanika label_ru='\u0413\u043e\u0440\u043e\u0434'"
 	 * @generated
 	 */
 	String getCity();
@@ -98,7 +98,7 @@ public interface PostalAddress extends ContactMethod {
 	 * @return the value of the '<em>Postal Code</em>' attribute.
 	 * @see #setPostalCode(String)
 	 * @see org.nasdanika.cv.cvPackage#getPostalAddress_PostalCode()
-	 * @model
+	 * @model annotation="urn:org.nasdanika label_ru='\u0418\u043d\u0434\u0435\u043a\u0441'"
 	 * @generated
 	 */
 	String getPostalCode();
@@ -120,7 +120,7 @@ public interface PostalAddress extends ContactMethod {
 	 * @return the value of the '<em>Line1</em>' attribute.
 	 * @see #setLine1(String)
 	 * @see org.nasdanika.cv.cvPackage#getPostalAddress_Line1()
-	 * @model
+	 * @model annotation="urn:org.nasdanika label_ru='\u0421\u0442\u0440\u043e\u043a\u0430 1'"
 	 * @generated
 	 */
 	String getLine1();
@@ -142,7 +142,7 @@ public interface PostalAddress extends ContactMethod {
 	 * @return the value of the '<em>Line2</em>' attribute.
 	 * @see #setLine2(String)
 	 * @see org.nasdanika.cv.cvPackage#getPostalAddress_Line2()
-	 * @model
+	 * @model annotation="urn:org.nasdanika label_ru='\u0421\u0442\u0440\u043e\u043a\u0430 2'"
 	 * @generated
 	 */
 	String getLine2();

@@ -3,7 +3,6 @@
 package org.nasdanika.cv.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
@@ -13,6 +12,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
  * @generated
  */
 public final class CvEditPlugin extends EMFPlugin {
+
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -85,5 +85,5 @@ public final class CvEditPlugin extends EMFPlugin {
 			plugin = this;
 		}
 	}
-
+	
 }

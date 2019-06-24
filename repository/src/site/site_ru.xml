@@ -12,7 +12,7 @@
  
    <menu name="Главная">
       <item name="Обзор" href="index.html" />
-      <item name="Документация модели" href="../model-doc/index.html" />
+      <item name="Документация модели" href="model-doc/index.html" />
       <item name="Информация о проекте" href="../project-info.html" />      
    </menu>
 

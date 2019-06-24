@@ -33,7 +33,7 @@ public interface ContactMethod extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.nasdanika.cv.cvPackage#getContactMethod_Name()
-	 * @model
+	 * @model annotation="urn:org.nasdanika label_ru='\u041d\u0430\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u043d\u0438\u0435'"
 	 * @generated
 	 */
 	String getName();
@@ -55,7 +55,7 @@ public interface ContactMethod extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see org.nasdanika.cv.cvPackage#getContactMethod_Description()
-	 * @model
+	 * @model annotation="urn:org.nasdanika label_ru='\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435'"
 	 * @generated
 	 */
 	String getDescription();

@@ -474,6 +474,8 @@ public class cvPackageImpl extends EPackageImpl implements cvPackage {
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/GenModel
 		createGenModelAnnotations();
+		// urn:org.nasdanika
+		createUrnorgAnnotations();
 	}
 
 	/**
@@ -501,6 +503,70 @@ public class cvPackageImpl extends EPackageImpl implements cvPackage {
 		   source,
 		   new String[] {
 			   "documentation", "Contact method interface."
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>urn:org.nasdanika</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUrnorgAnnotations() {
+		String source = "urn:org.nasdanika";
+		addAnnotation
+		  (getContactMethod_Name(),
+		   source,
+		   new String[] {
+			   "label_ru", "\u041d\u0430\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u043d\u0438\u0435"
+		   });
+		addAnnotation
+		  (getContactMethod_Description(),
+		   source,
+		   new String[] {
+			   "label_ru", "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435"
+		   });
+		addAnnotation
+		  (postalAddressEClass,
+		   source,
+		   new String[] {
+			   "label_ru", "\u041f\u043e\u0447\u0442\u043e\u0432\u044b\u0439 \u0430\u0434\u0440\u0435\u0441"
+		   });
+		addAnnotation
+		  (getPostalAddress_Country(),
+		   source,
+		   new String[] {
+			   "label_ru", "\u0421\u0442\u0440\u0430\u043d\u0430"
+		   });
+		addAnnotation
+		  (getPostalAddress_StateProvince(),
+		   source,
+		   new String[] {
+			   "label_ru", "\u0428\u0442\u0430\u0442/\u043f\u0440\u043e\u0432\u0438\u043d\u0446\u0438\u044f/\u0440\u0435\u0433\u0438\u043e\u043d"
+		   });
+		addAnnotation
+		  (getPostalAddress_City(),
+		   source,
+		   new String[] {
+			   "label_ru", "\u0413\u043e\u0440\u043e\u0434"
+		   });
+		addAnnotation
+		  (getPostalAddress_PostalCode(),
+		   source,
+		   new String[] {
+			   "label_ru", "\u0418\u043d\u0434\u0435\u043a\u0441"
+		   });
+		addAnnotation
+		  (getPostalAddress_Line1(),
+		   source,
+		   new String[] {
+			   "label_ru", "\u0421\u0442\u0440\u043e\u043a\u0430 1"
+		   });
+		addAnnotation
+		  (getPostalAddress_Line2(),
+		   source,
+		   new String[] {
+			   "label_ru", "\u0421\u0442\u0440\u043e\u043a\u0430 2"
 		   });
 	}
 
