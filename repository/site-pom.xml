@@ -135,7 +135,7 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>copy-model-doc</id>
+						<id>copy-model-doc-ru</id>
 						<phase>pre-site</phase>
 						<goals>
 							<goal>copy-resources</goal>
