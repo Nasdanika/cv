@@ -135,6 +135,22 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>copy-model-doc</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/site/ru/model-doc</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/target/products/org.nasdanika.cv.tests.product/linux/gtk/x86_64/target/ru/model-doc</directory>
+									<filtering>false</filtering>
+								</resource>								
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
 						<id>copy-guides-developer</id>
 						<phase>pre-site</phase>
 						<goals>
