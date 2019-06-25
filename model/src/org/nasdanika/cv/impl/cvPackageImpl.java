@@ -527,6 +527,12 @@ public class cvPackageImpl extends EPackageImpl implements cvPackage {
 			   "label_ru", "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435"
 		   });
 		addAnnotation
+		  (phoneEClass,
+		   source,
+		   new String[] {
+			   "label_ru", "\u0422\u0435\u043b\u0435\u0444\u043e\u043d"
+		   });
+		addAnnotation
 		  (postalAddressEClass,
 		   source,
 		   new String[] {

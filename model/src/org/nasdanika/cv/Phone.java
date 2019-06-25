@@ -19,7 +19,7 @@ package org.nasdanika.cv;
  * </ul>
  *
  * @see org.nasdanika.cv.cvPackage#getPhone()
- * @model
+ * @model annotation="urn:org.nasdanika label_ru='\u0422\u0435\u043b\u0435\u0444\u043e\u043d'"
  * @generated
  */
 public interface Phone extends ContactMethod {
