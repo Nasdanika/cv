@@ -42,7 +42,7 @@ public class GenerateModelDocumentation {
 		generator.loadGenModel(MODEL_URI);
 		Container<InputStream> fsc = new FileSystemContainer(new File("target/model-doc"));
 		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
-		generator.generate(fsc.adapt(null, encoder), progressMonitor);		
+		generator.generate(fsc.adapt(null, encoder, null), progressMonitor);		
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class GenerateModelDocumentation {
 		generator.loadGenModel(MODEL_URI);
 		Container<InputStream> fsc = new FileSystemContainer(new File("target/ru/model-doc"));
 		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
-		generator.generate(fsc.adapt(null, encoder), progressMonitor);		
+		generator.generate(fsc.adapt(null, encoder, null), progressMonitor);		
 	}	
 	
 }
