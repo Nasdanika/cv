@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.nasdanika.cv.edit;singleton:=true
 Automatic-Module-Name: org.nasdanika.cv.edit
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 2020.12.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.nasdanika.cv.provider.CvEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -12,5 +12,9 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.nasdanika.cv.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.nasdanika.cv;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.nasdanika.ncore;visibility:=reexport,
+ org.nasdanika.ncore.edit;visibility:=reexport,
+ org.nasdanika.party;visibility:=reexport,
+ org.nasdanika.party.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

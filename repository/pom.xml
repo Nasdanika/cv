@@ -7,8 +7,8 @@
 	<packaging>eclipse-repository</packaging>
 	<parent>
 		<groupId>org.nasdanika.cv</groupId>
-		<artifactId>org.nasdanika.cv.parent</artifactId>
-		<version>0.1.0-SNAPSHOT</version>
+		<artifactId>parent</artifactId>
+		<version>2020.12.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 	

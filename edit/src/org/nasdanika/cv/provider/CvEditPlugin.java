@@ -3,7 +3,12 @@
 package org.nasdanika.cv.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.nasdanika.ncore.provider.NcoreEditPlugin;
+
+import org.nasdanika.party.provider.PartyEditPlugin;
 
 /**
  * This is the central singleton for the Cv edit plugin.
@@ -12,7 +17,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
  * @generated
  */
 public final class CvEditPlugin extends EMFPlugin {
-
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -38,6 +42,8 @@ public final class CvEditPlugin extends EMFPlugin {
 	public CvEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     NcoreEditPlugin.INSTANCE,
+		     PartyEditPlugin.INSTANCE,
 		   });
 	}
 
@@ -85,5 +91,5 @@ public final class CvEditPlugin extends EMFPlugin {
 			plugin = this;
 		}
 	}
-	
+
 }

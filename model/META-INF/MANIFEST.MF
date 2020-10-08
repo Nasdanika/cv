@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.nasdanika.cv;singleton:=true
 Automatic-Module-Name: org.nasdanika.cv
-Bundle-Version: 0.1.0.qualifier
+Bundle-Version: 2020.12.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
@@ -12,5 +12,8 @@ Export-Package: org.nasdanika.cv,
  org.nasdanika.cv.impl,
  org.nasdanika.cv.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.nasdanika.ncore;visibility:=reexport,
+ org.nasdanika.party;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Bundle-Activator: org.nasdanika.cv.util.Activator

@@ -10,7 +10,7 @@
       <!-- @generated cv -->
       <factory
             uri="urn:org.nasdanika.cv"
-            class="org.nasdanika.cv.provider.cvItemProviderAdapterFactory"
+            class="org.nasdanika.cv.provider.CvItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

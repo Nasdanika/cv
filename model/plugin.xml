@@ -10,7 +10,7 @@
       <!-- @generated cv -->
       <package
             uri="urn:org.nasdanika.cv"
-            class="org.nasdanika.cv.cvPackage"
+            class="org.nasdanika.cv.CvPackage"
             genModel="model/cv.genmodel"/>
    </extension>
 
