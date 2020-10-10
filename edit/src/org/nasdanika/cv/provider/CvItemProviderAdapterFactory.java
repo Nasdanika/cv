@@ -187,6 +187,167 @@ public class CvItemProviderAdapterFactory extends CvAdapterFactory implements Co
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.SkillLevel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SkillLevelItemProvider skillLevelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.cv.SkillLevel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSkillLevelAdapter() {
+		if (skillLevelItemProvider == null) {
+			skillLevelItemProvider = new SkillLevelItemProvider(this);
+		}
+
+		return skillLevelItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.SkillCategory} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SkillCategoryItemProvider skillCategoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.cv.SkillCategory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSkillCategoryAdapter() {
+		if (skillCategoryItemProvider == null) {
+			skillCategoryItemProvider = new SkillCategoryItemProvider(this);
+		}
+
+		return skillCategoryItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.Skill} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SkillItemProvider skillItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.cv.Skill}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSkillAdapter() {
+		if (skillItemProvider == null) {
+			skillItemProvider = new SkillItemProvider(this);
+		}
+
+		return skillItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.SkillRelease} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SkillReleaseItemProvider skillReleaseItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.cv.SkillRelease}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSkillReleaseAdapter() {
+		if (skillReleaseItemProvider == null) {
+			skillReleaseItemProvider = new SkillReleaseItemProvider(this);
+		}
+
+		return skillReleaseItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.AccomplishmentType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AccomplishmentTypeItemProvider accomplishmentTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.cv.AccomplishmentType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAccomplishmentTypeAdapter() {
+		if (accomplishmentTypeItemProvider == null) {
+			accomplishmentTypeItemProvider = new AccomplishmentTypeItemProvider(this);
+		}
+
+		return accomplishmentTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.AccomplishmentCategory} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AccomplishmentCategoryItemProvider accomplishmentCategoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.cv.AccomplishmentCategory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAccomplishmentCategoryAdapter() {
+		if (accomplishmentCategoryItemProvider == null) {
+			accomplishmentCategoryItemProvider = new AccomplishmentCategoryItemProvider(this);
+		}
+
+		return accomplishmentCategoryItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.Resume} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResumeItemProvider resumeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.cv.Resume}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResumeAdapter() {
+		if (resumeItemProvider == null) {
+			resumeItemProvider = new ResumeItemProvider(this);
+		}
+
+		return resumeItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -296,6 +457,13 @@ public class CvItemProviderAdapterFactory extends CvAdapterFactory implements Co
 		if (positionItemProvider != null) positionItemProvider.dispose();
 		if (assignmentItemProvider != null) assignmentItemProvider.dispose();
 		if (commentItemProvider != null) commentItemProvider.dispose();
+		if (skillLevelItemProvider != null) skillLevelItemProvider.dispose();
+		if (skillCategoryItemProvider != null) skillCategoryItemProvider.dispose();
+		if (skillItemProvider != null) skillItemProvider.dispose();
+		if (skillReleaseItemProvider != null) skillReleaseItemProvider.dispose();
+		if (accomplishmentTypeItemProvider != null) accomplishmentTypeItemProvider.dispose();
+		if (accomplishmentCategoryItemProvider != null) accomplishmentCategoryItemProvider.dispose();
+		if (resumeItemProvider != null) resumeItemProvider.dispose();
 	}
 
 }

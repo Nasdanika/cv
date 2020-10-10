@@ -98,6 +98,46 @@ public class CvAdapterFactory extends AdapterFactoryImpl {
 				return createCommentAdapter();
 			}
 			@Override
+			public Adapter caseSkillLevel(SkillLevel object) {
+				return createSkillLevelAdapter();
+			}
+			@Override
+			public Adapter caseSkillCategoryElement(SkillCategoryElement object) {
+				return createSkillCategoryElementAdapter();
+			}
+			@Override
+			public Adapter caseSkillCategory(SkillCategory object) {
+				return createSkillCategoryAdapter();
+			}
+			@Override
+			public Adapter caseSkill(Skill object) {
+				return createSkillAdapter();
+			}
+			@Override
+			public Adapter caseSkillRelease(SkillRelease object) {
+				return createSkillReleaseAdapter();
+			}
+			@Override
+			public Adapter caseAccomplishmentType(AccomplishmentType object) {
+				return createAccomplishmentTypeAdapter();
+			}
+			@Override
+			public Adapter caseAccomplishmentCategoryElement(AccomplishmentCategoryElement object) {
+				return createAccomplishmentCategoryElementAdapter();
+			}
+			@Override
+			public Adapter caseAccomplishmentCategory(AccomplishmentCategory object) {
+				return createAccomplishmentCategoryAdapter();
+			}
+			@Override
+			public Adapter caseAccomplishment(Accomplishment object) {
+				return createAccomplishmentAdapter();
+			}
+			@Override
+			public Adapter caseResume(Resume object) {
+				return createResumeAdapter();
+			}
+			@Override
 			public Adapter caseModelElement(ModelElement object) {
 				return createModelElementAdapter();
 			}
@@ -216,6 +256,146 @@ public class CvAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCommentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.SkillLevel <em>Skill Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.SkillLevel
+	 * @generated
+	 */
+	public Adapter createSkillLevelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.SkillCategoryElement <em>Skill Category Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.SkillCategoryElement
+	 * @generated
+	 */
+	public Adapter createSkillCategoryElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.SkillCategory <em>Skill Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.SkillCategory
+	 * @generated
+	 */
+	public Adapter createSkillCategoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.Skill <em>Skill</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.Skill
+	 * @generated
+	 */
+	public Adapter createSkillAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.SkillRelease <em>Skill Release</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.SkillRelease
+	 * @generated
+	 */
+	public Adapter createSkillReleaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.AccomplishmentType <em>Accomplishment Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.AccomplishmentType
+	 * @generated
+	 */
+	public Adapter createAccomplishmentTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.AccomplishmentCategoryElement <em>Accomplishment Category Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.AccomplishmentCategoryElement
+	 * @generated
+	 */
+	public Adapter createAccomplishmentCategoryElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.AccomplishmentCategory <em>Accomplishment Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.AccomplishmentCategory
+	 * @generated
+	 */
+	public Adapter createAccomplishmentCategoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.Accomplishment <em>Accomplishment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.Accomplishment
+	 * @generated
+	 */
+	public Adapter createAccomplishmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.cv.Resume <em>Resume</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.cv.Resume
+	 * @generated
+	 */
+	public Adapter createResumeAdapter() {
 		return null;
 	}
 

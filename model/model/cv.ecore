@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cv" nsURI="urn:org.nasdanika.cv" nsPrefix="org.nasdanika.cv">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-    <details key="documentation" value="Nasdanika curriculum vitae model provides elements for documenting someone's life work in a detailed and cross-referenced fashion, e.g. assignments may reference skills and co-workers.&#xA;If used for job hunting, the model may serve as a data source for resumes which include a subset of model elements. &#xA;The goal is to have a single potentially very detailed model and be able to produce multiple representations of that model with different level of details and formatting, e.g. a web site or a single page.&#xA;&#xA;The model also provides element for tracking job search execution.&#xA;"/>
+    <details key="documentation" value="Nasdanika curriculum vitae model provides elements for documenting someone's life work in a detailed and cross-referenced fashion, e.g. assignments may reference skills and co-workers.&#xA;If used for job hunting, the model may serve as a data source for resumes which include a subset of model elements. &#xA;The goal is to have a single potentially very detailed model and be able to produce multiple representations of that model with different level of details and formatting, e.g. a web site or a single page.&#xA;&#xA;"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="CurriculumVitae" eSuperTypes="../../org.nasdanika.party/model/party.ecore#//Person">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -17,6 +17,24 @@
         <details key="documentation" value="Directory of parties referenced in the CV. Experience-specific parties may be referenced at the experience level."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skillLevels" upperBound="-1"
+        eType="#//SkillLevel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skills" upperBound="-1"
+        eType="#//SkillCategoryElement" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Directory of skills"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="accomplishments" upperBound="-1"
+        eType="#//AccomplishmentCategoryElement" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Directory of skills"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="accomplishmentTypes" upperBound="-1"
+        eType="#//AccomplishmentType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resumes" upperBound="-1"
+        eType="#//Resume" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Experience" eSuperTypes="../../org.nasdanika.party/model/party.ecore#//Organization">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -56,6 +74,12 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assignments" upperBound="-1"
         eType="#//Assignment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skills" upperBound="-1"
+        eType="#//Skill">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Skills associated with this accomplishment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Assignment" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//ModelElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -71,6 +95,12 @@
         <details key="documentation" value="End date. Blank means present."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skills" upperBound="-1"
+        eType="#//Skill">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Skills associated with this accomplishment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Comment">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -84,6 +114,112 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Comment in markdown."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SkillLevel" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//ModelElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SkillCategoryElement" abstract="true"
+      interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class for model elements which can be contained by skill category - skills and sub-categories."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//SkillCategoryElement" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Skills in the category or skill specializations. E.g. skill Java may have a sub-skill &quot;Spring&quot;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SkillCategory" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//ModelElement #//SkillCategoryElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Grouping of persona needs."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Skill" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//Entity #//SkillCategoryElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Personas have needs which may be satisfied by organization offerings. Needs can be organized into a hierarchy and assigned weights either manually or using decision analysis techniques. Needs may be satisfied by offerings via scenarios explaining how a need is satisfied.&#xA;&#xA;Must have, need to have, delighter - here or at the offering level?"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level" eType="#//SkillLevel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SkillRelease" eSuperTypes="#//Skill">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Release of a skill. For example, Java 11."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AccomplishmentType" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//ModelElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AccomplishmentCategoryElement" abstract="true"
+      interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class for model elements which can be contained by skill category - skills and sub-categories."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//AccomplishmentCategoryElement" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Skills in the category or skill specializations. E.g. skill Java may have a sub-skill &quot;Spring&quot;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AccomplishmentCategory" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//ModelElement #//AccomplishmentCategoryElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Grouping of persona needs."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Accomplishment" abstract="true" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//Entity #//AccomplishmentCategoryElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Personas have needs which may be satisfied by organization offerings. Needs can be organized into a hierarchy and assigned weights either manually or using decision analysis techniques. Needs may be satisfied by offerings via scenarios explaining how a need is satisfied.&#xA;&#xA;Must have, need to have, delighter - here or at the offering level?"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//AccomplishmentType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Accomplishment type. E.g. education, certification, training, book."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authority" eType="ecore:EClass ../../org.nasdanika.party/model/party.ecore#//Party"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skills" upperBound="-1"
+        eType="#//Skill">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Skills associated with this accomplishment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="accomplishmentId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Accomplishment ID which can be used for verification, e.g. certificate number or ISBN number."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Accomplishment URL."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Date of accomplishment, e.g. date of graduation or certification."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Optional start date of an accomplishment, e.g. start of training."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expires" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Optional accomplishment expiration date."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resume" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Resume is a view/representation of the CV. It may contain all CV elements  or a subset of them. It also defines skill highlights and publishing configuration."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Elements to include to the resume."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skills" upperBound="-1"
+        eType="#//Skill">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Skill highlights."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

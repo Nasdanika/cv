@@ -4,6 +4,7 @@ package org.nasdanika.cv;
 
 import java.util.Date;
 
+import org.eclipse.emf.common.util.EList;
 import org.nasdanika.ncore.ModelElement;
 
 /**
@@ -21,6 +22,7 @@ import org.nasdanika.ncore.ModelElement;
  * <ul>
  *   <li>{@link org.nasdanika.cv.Assignment#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link org.nasdanika.cv.Assignment#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link org.nasdanika.cv.Assignment#getSkills <em>Skills</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.cv.CvPackage#getAssignment()
@@ -77,5 +79,20 @@ public interface Assignment extends ModelElement {
 	 * @generated
 	 */
 	void setEndDate(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>Skills</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.cv.Skill}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Skills associated with this accomplishment.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Skills</em>' reference list.
+	 * @see org.nasdanika.cv.CvPackage#getAssignment_Skills()
+	 * @model
+	 * @generated
+	 */
+	EList<Skill> getSkills();
 
 } // Assignment

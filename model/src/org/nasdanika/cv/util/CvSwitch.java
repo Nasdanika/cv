@@ -120,6 +120,84 @@ public class CvSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CvPackage.SKILL_LEVEL: {
+				SkillLevel skillLevel = (SkillLevel)theEObject;
+				T result = caseSkillLevel(skillLevel);
+				if (result == null) result = caseModelElement(skillLevel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.SKILL_CATEGORY_ELEMENT: {
+				SkillCategoryElement skillCategoryElement = (SkillCategoryElement)theEObject;
+				T result = caseSkillCategoryElement(skillCategoryElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.SKILL_CATEGORY: {
+				SkillCategory skillCategory = (SkillCategory)theEObject;
+				T result = caseSkillCategory(skillCategory);
+				if (result == null) result = caseModelElement(skillCategory);
+				if (result == null) result = caseSkillCategoryElement(skillCategory);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.SKILL: {
+				Skill skill = (Skill)theEObject;
+				T result = caseSkill(skill);
+				if (result == null) result = caseEntity(skill);
+				if (result == null) result = caseSkillCategoryElement(skill);
+				if (result == null) result = caseModelElement(skill);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.SKILL_RELEASE: {
+				SkillRelease skillRelease = (SkillRelease)theEObject;
+				T result = caseSkillRelease(skillRelease);
+				if (result == null) result = caseSkill(skillRelease);
+				if (result == null) result = caseEntity(skillRelease);
+				if (result == null) result = caseSkillCategoryElement(skillRelease);
+				if (result == null) result = caseModelElement(skillRelease);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.ACCOMPLISHMENT_TYPE: {
+				AccomplishmentType accomplishmentType = (AccomplishmentType)theEObject;
+				T result = caseAccomplishmentType(accomplishmentType);
+				if (result == null) result = caseModelElement(accomplishmentType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.ACCOMPLISHMENT_CATEGORY_ELEMENT: {
+				AccomplishmentCategoryElement accomplishmentCategoryElement = (AccomplishmentCategoryElement)theEObject;
+				T result = caseAccomplishmentCategoryElement(accomplishmentCategoryElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.ACCOMPLISHMENT_CATEGORY: {
+				AccomplishmentCategory accomplishmentCategory = (AccomplishmentCategory)theEObject;
+				T result = caseAccomplishmentCategory(accomplishmentCategory);
+				if (result == null) result = caseModelElement(accomplishmentCategory);
+				if (result == null) result = caseAccomplishmentCategoryElement(accomplishmentCategory);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.ACCOMPLISHMENT: {
+				Accomplishment accomplishment = (Accomplishment)theEObject;
+				T result = caseAccomplishment(accomplishment);
+				if (result == null) result = caseEntity(accomplishment);
+				if (result == null) result = caseAccomplishmentCategoryElement(accomplishment);
+				if (result == null) result = caseModelElement(accomplishment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CvPackage.RESUME: {
+				Resume resume = (Resume)theEObject;
+				T result = caseResume(resume);
+				if (result == null) result = caseEntity(resume);
+				if (result == null) result = caseModelElement(resume);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -196,6 +274,156 @@ public class CvSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComment(Comment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Skill Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Skill Level</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSkillLevel(SkillLevel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Skill Category Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Skill Category Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSkillCategoryElement(SkillCategoryElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Skill Category</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Skill Category</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSkillCategory(SkillCategory object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Skill</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Skill</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSkill(Skill object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Skill Release</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Skill Release</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSkillRelease(SkillRelease object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accomplishment Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accomplishment Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccomplishmentType(AccomplishmentType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accomplishment Category Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accomplishment Category Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccomplishmentCategoryElement(AccomplishmentCategoryElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accomplishment Category</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accomplishment Category</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccomplishmentCategory(AccomplishmentCategory object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accomplishment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accomplishment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccomplishment(Accomplishment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resume</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resume</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResume(Resume object) {
 		return null;
 	}
 

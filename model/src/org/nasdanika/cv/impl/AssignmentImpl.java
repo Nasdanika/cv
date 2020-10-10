@@ -2,13 +2,16 @@
  */
 package org.nasdanika.cv.impl;
 
+import java.util.Collection;
 import java.util.Date;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.cv.Assignment;
 import org.nasdanika.cv.CvPackage;
 
+import org.nasdanika.cv.Skill;
 import org.nasdanika.ncore.impl.ModelElementImpl;
 
 /**
@@ -21,6 +24,7 @@ import org.nasdanika.ncore.impl.ModelElementImpl;
  * <ul>
  *   <li>{@link org.nasdanika.cv.impl.AssignmentImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link org.nasdanika.cv.impl.AssignmentImpl#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link org.nasdanika.cv.impl.AssignmentImpl#getSkills <em>Skills</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,6 +114,17 @@ public class AssignmentImpl extends ModelElementImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Skill> getSkills() {
+		return (EList<Skill>)eDynamicGet(CvPackage.ASSIGNMENT__SKILLS, CvPackage.Literals.ASSIGNMENT__SKILLS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -117,6 +132,8 @@ public class AssignmentImpl extends ModelElementImpl implements Assignment {
 				return getStartDate();
 			case CvPackage.ASSIGNMENT__END_DATE:
 				return getEndDate();
+			case CvPackage.ASSIGNMENT__SKILLS:
+				return getSkills();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -126,6 +143,7 @@ public class AssignmentImpl extends ModelElementImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -134,6 +152,10 @@ public class AssignmentImpl extends ModelElementImpl implements Assignment {
 				return;
 			case CvPackage.ASSIGNMENT__END_DATE:
 				setEndDate((Date)newValue);
+				return;
+			case CvPackage.ASSIGNMENT__SKILLS:
+				getSkills().clear();
+				getSkills().addAll((Collection<? extends Skill>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -153,6 +175,9 @@ public class AssignmentImpl extends ModelElementImpl implements Assignment {
 			case CvPackage.ASSIGNMENT__END_DATE:
 				setEndDate(END_DATE_EDEFAULT);
 				return;
+			case CvPackage.ASSIGNMENT__SKILLS:
+				getSkills().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -169,6 +194,8 @@ public class AssignmentImpl extends ModelElementImpl implements Assignment {
 				return START_DATE_EDEFAULT == null ? getStartDate() != null : !START_DATE_EDEFAULT.equals(getStartDate());
 			case CvPackage.ASSIGNMENT__END_DATE:
 				return END_DATE_EDEFAULT == null ? getEndDate() != null : !END_DATE_EDEFAULT.equals(getEndDate());
+			case CvPackage.ASSIGNMENT__SKILLS:
+				return !getSkills().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

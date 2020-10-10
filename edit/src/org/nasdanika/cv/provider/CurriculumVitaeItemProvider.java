@@ -60,6 +60,11 @@ public class CurriculumVitaeItemProvider extends PersonItemProvider {
 		super.addEReferenceItemProviderChildren(object, children);
 		children.add(new EReferenceItemProvider(this, (EObject) object, CvPackage.Literals.CURRICULUM_VITAE__EXPERIENCES));		
 		children.add(new EReferenceItemProvider(this, (EObject) object, CvPackage.Literals.CURRICULUM_VITAE__DIRECTORY));		
+		children.add(new EReferenceItemProvider(this, (EObject) object, CvPackage.Literals.CURRICULUM_VITAE__SKILL_LEVELS));		
+		children.add(new EReferenceItemProvider(this, (EObject) object, CvPackage.Literals.CURRICULUM_VITAE__SKILLS));		
+		children.add(new EReferenceItemProvider(this, (EObject) object, CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENTS));		
+		children.add(new EReferenceItemProvider(this, (EObject) object, CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES));		
+		children.add(new EReferenceItemProvider(this, (EObject) object, CvPackage.Literals.CURRICULUM_VITAE__RESUMES));		
 	}	
 
 	/**
@@ -76,6 +81,12 @@ public class CurriculumVitaeItemProvider extends PersonItemProvider {
 			super.getChildrenFeatures(object);
 //			childrenFeatures.add(CvPackage.Literals.CURRICULUM_VITAE__EXPERIENCES);
 //			childrenFeatures.add(CvPackage.Literals.CURRICULUM_VITAE__DIRECTORY);
+//			childrenFeatures.add(CvPackage.Literals.CURRICULUM_VITAE__SKILL_LEVELS);
+//			childrenFeatures.add(CvPackage.Literals.CURRICULUM_VITAE__SKILLS);
+//			childrenFeatures.add(CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENTS);
+//			childrenFeatures.add(CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES);
+//			childrenFeatures.add(CvPackage.Literals.CURRICULUM_VITAE__AUTHORITIES);
+//			childrenFeatures.add(CvPackage.Literals.CURRICULUM_VITAE__RESUMES);
 		}
 		return childrenFeatures;
 	}
@@ -105,6 +116,16 @@ public class CurriculumVitaeItemProvider extends PersonItemProvider {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -131,6 +152,11 @@ public class CurriculumVitaeItemProvider extends PersonItemProvider {
 		switch (notification.getFeatureID(CurriculumVitae.class)) {
 			case CvPackage.CURRICULUM_VITAE__EXPERIENCES:
 			case CvPackage.CURRICULUM_VITAE__DIRECTORY:
+			case CvPackage.CURRICULUM_VITAE__SKILL_LEVELS:
+			case CvPackage.CURRICULUM_VITAE__SKILLS:
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENTS:
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES:
+			case CvPackage.CURRICULUM_VITAE__RESUMES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -182,6 +208,41 @@ public class CurriculumVitaeItemProvider extends PersonItemProvider {
 			(createChildParameter
 				(CvPackage.Literals.CURRICULUM_VITAE__DIRECTORY,
 				 PartyFactory.eINSTANCE.createPerson()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CURRICULUM_VITAE__SKILL_LEVELS,
+				 CvFactory.eINSTANCE.createSkillLevel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CURRICULUM_VITAE__SKILLS,
+				 CvFactory.eINSTANCE.createSkillCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CURRICULUM_VITAE__SKILLS,
+				 CvFactory.eINSTANCE.createSkill()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CURRICULUM_VITAE__SKILLS,
+				 CvFactory.eINSTANCE.createSkillRelease()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENTS,
+				 CvFactory.eINSTANCE.createAccomplishmentCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES,
+				 CvFactory.eINSTANCE.createAccomplishmentType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CURRICULUM_VITAE__RESUMES,
+				 CvFactory.eINSTANCE.createResume()));
 	}
 
 	/**

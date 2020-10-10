@@ -21,6 +21,11 @@ import org.nasdanika.party.Person;
  * <ul>
  *   <li>{@link org.nasdanika.cv.CurriculumVitae#getExperiences <em>Experiences</em>}</li>
  *   <li>{@link org.nasdanika.cv.CurriculumVitae#getDirectory <em>Directory</em>}</li>
+ *   <li>{@link org.nasdanika.cv.CurriculumVitae#getSkillLevels <em>Skill Levels</em>}</li>
+ *   <li>{@link org.nasdanika.cv.CurriculumVitae#getSkills <em>Skills</em>}</li>
+ *   <li>{@link org.nasdanika.cv.CurriculumVitae#getAccomplishments <em>Accomplishments</em>}</li>
+ *   <li>{@link org.nasdanika.cv.CurriculumVitae#getAccomplishmentTypes <em>Accomplishment Types</em>}</li>
+ *   <li>{@link org.nasdanika.cv.CurriculumVitae#getResumes <em>Resumes</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.cv.CvPackage#getCurriculumVitae()
@@ -55,4 +60,70 @@ public interface CurriculumVitae extends Person {
 	 * @generated
 	 */
 	EList<DirectoryElement> getDirectory();
+
+	/**
+	 * Returns the value of the '<em><b>Skill Levels</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.cv.SkillLevel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Skill Levels</em>' containment reference list.
+	 * @see org.nasdanika.cv.CvPackage#getCurriculumVitae_SkillLevels()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SkillLevel> getSkillLevels();
+
+	/**
+	 * Returns the value of the '<em><b>Skills</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.cv.SkillCategoryElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Directory of skills
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Skills</em>' containment reference list.
+	 * @see org.nasdanika.cv.CvPackage#getCurriculumVitae_Skills()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SkillCategoryElement> getSkills();
+
+	/**
+	 * Returns the value of the '<em><b>Accomplishments</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.cv.AccomplishmentCategoryElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Directory of skills
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Accomplishments</em>' containment reference list.
+	 * @see org.nasdanika.cv.CvPackage#getCurriculumVitae_Accomplishments()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AccomplishmentCategoryElement> getAccomplishments();
+
+	/**
+	 * Returns the value of the '<em><b>Accomplishment Types</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.cv.AccomplishmentType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Accomplishment Types</em>' containment reference list.
+	 * @see org.nasdanika.cv.CvPackage#getCurriculumVitae_AccomplishmentTypes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AccomplishmentType> getAccomplishmentTypes();
+
+	/**
+	 * Returns the value of the '<em><b>Resumes</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.cv.Resume}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resumes</em>' containment reference list.
+	 * @see org.nasdanika.cv.CvPackage#getCurriculumVitae_Resumes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Resume> getResumes();
 } // CurriculumVitae

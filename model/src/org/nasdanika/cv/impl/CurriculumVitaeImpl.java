@@ -9,10 +9,15 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.nasdanika.cv.AccomplishmentCategoryElement;
+import org.nasdanika.cv.AccomplishmentType;
 import org.nasdanika.cv.CurriculumVitae;
 import org.nasdanika.cv.CvPackage;
 
 import org.nasdanika.cv.Experience;
+import org.nasdanika.cv.Resume;
+import org.nasdanika.cv.SkillCategoryElement;
+import org.nasdanika.cv.SkillLevel;
 import org.nasdanika.party.DirectoryElement;
 import org.nasdanika.party.impl.PersonImpl;
 
@@ -26,6 +31,11 @@ import org.nasdanika.party.impl.PersonImpl;
  * <ul>
  *   <li>{@link org.nasdanika.cv.impl.CurriculumVitaeImpl#getExperiences <em>Experiences</em>}</li>
  *   <li>{@link org.nasdanika.cv.impl.CurriculumVitaeImpl#getDirectory <em>Directory</em>}</li>
+ *   <li>{@link org.nasdanika.cv.impl.CurriculumVitaeImpl#getSkillLevels <em>Skill Levels</em>}</li>
+ *   <li>{@link org.nasdanika.cv.impl.CurriculumVitaeImpl#getSkills <em>Skills</em>}</li>
+ *   <li>{@link org.nasdanika.cv.impl.CurriculumVitaeImpl#getAccomplishments <em>Accomplishments</em>}</li>
+ *   <li>{@link org.nasdanika.cv.impl.CurriculumVitaeImpl#getAccomplishmentTypes <em>Accomplishment Types</em>}</li>
+ *   <li>{@link org.nasdanika.cv.impl.CurriculumVitaeImpl#getResumes <em>Resumes</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,6 +87,61 @@ public class CurriculumVitaeImpl extends PersonImpl implements CurriculumVitae {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<SkillLevel> getSkillLevels() {
+		return (EList<SkillLevel>)eDynamicGet(CvPackage.CURRICULUM_VITAE__SKILL_LEVELS, CvPackage.Literals.CURRICULUM_VITAE__SKILL_LEVELS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<SkillCategoryElement> getSkills() {
+		return (EList<SkillCategoryElement>)eDynamicGet(CvPackage.CURRICULUM_VITAE__SKILLS, CvPackage.Literals.CURRICULUM_VITAE__SKILLS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<AccomplishmentCategoryElement> getAccomplishments() {
+		return (EList<AccomplishmentCategoryElement>)eDynamicGet(CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENTS, CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<AccomplishmentType> getAccomplishmentTypes() {
+		return (EList<AccomplishmentType>)eDynamicGet(CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES, CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Resume> getResumes() {
+		return (EList<Resume>)eDynamicGet(CvPackage.CURRICULUM_VITAE__RESUMES, CvPackage.Literals.CURRICULUM_VITAE__RESUMES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -84,6 +149,16 @@ public class CurriculumVitaeImpl extends PersonImpl implements CurriculumVitae {
 				return ((InternalEList<?>)getExperiences()).basicRemove(otherEnd, msgs);
 			case CvPackage.CURRICULUM_VITAE__DIRECTORY:
 				return ((InternalEList<?>)getDirectory()).basicRemove(otherEnd, msgs);
+			case CvPackage.CURRICULUM_VITAE__SKILL_LEVELS:
+				return ((InternalEList<?>)getSkillLevels()).basicRemove(otherEnd, msgs);
+			case CvPackage.CURRICULUM_VITAE__SKILLS:
+				return ((InternalEList<?>)getSkills()).basicRemove(otherEnd, msgs);
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENTS:
+				return ((InternalEList<?>)getAccomplishments()).basicRemove(otherEnd, msgs);
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES:
+				return ((InternalEList<?>)getAccomplishmentTypes()).basicRemove(otherEnd, msgs);
+			case CvPackage.CURRICULUM_VITAE__RESUMES:
+				return ((InternalEList<?>)getResumes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -100,6 +175,16 @@ public class CurriculumVitaeImpl extends PersonImpl implements CurriculumVitae {
 				return getExperiences();
 			case CvPackage.CURRICULUM_VITAE__DIRECTORY:
 				return getDirectory();
+			case CvPackage.CURRICULUM_VITAE__SKILL_LEVELS:
+				return getSkillLevels();
+			case CvPackage.CURRICULUM_VITAE__SKILLS:
+				return getSkills();
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENTS:
+				return getAccomplishments();
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES:
+				return getAccomplishmentTypes();
+			case CvPackage.CURRICULUM_VITAE__RESUMES:
+				return getResumes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -121,6 +206,26 @@ public class CurriculumVitaeImpl extends PersonImpl implements CurriculumVitae {
 				getDirectory().clear();
 				getDirectory().addAll((Collection<? extends DirectoryElement>)newValue);
 				return;
+			case CvPackage.CURRICULUM_VITAE__SKILL_LEVELS:
+				getSkillLevels().clear();
+				getSkillLevels().addAll((Collection<? extends SkillLevel>)newValue);
+				return;
+			case CvPackage.CURRICULUM_VITAE__SKILLS:
+				getSkills().clear();
+				getSkills().addAll((Collection<? extends SkillCategoryElement>)newValue);
+				return;
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENTS:
+				getAccomplishments().clear();
+				getAccomplishments().addAll((Collection<? extends AccomplishmentCategoryElement>)newValue);
+				return;
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES:
+				getAccomplishmentTypes().clear();
+				getAccomplishmentTypes().addAll((Collection<? extends AccomplishmentType>)newValue);
+				return;
+			case CvPackage.CURRICULUM_VITAE__RESUMES:
+				getResumes().clear();
+				getResumes().addAll((Collection<? extends Resume>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -139,6 +244,21 @@ public class CurriculumVitaeImpl extends PersonImpl implements CurriculumVitae {
 			case CvPackage.CURRICULUM_VITAE__DIRECTORY:
 				getDirectory().clear();
 				return;
+			case CvPackage.CURRICULUM_VITAE__SKILL_LEVELS:
+				getSkillLevels().clear();
+				return;
+			case CvPackage.CURRICULUM_VITAE__SKILLS:
+				getSkills().clear();
+				return;
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENTS:
+				getAccomplishments().clear();
+				return;
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES:
+				getAccomplishmentTypes().clear();
+				return;
+			case CvPackage.CURRICULUM_VITAE__RESUMES:
+				getResumes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -155,6 +275,16 @@ public class CurriculumVitaeImpl extends PersonImpl implements CurriculumVitae {
 				return !getExperiences().isEmpty();
 			case CvPackage.CURRICULUM_VITAE__DIRECTORY:
 				return !getDirectory().isEmpty();
+			case CvPackage.CURRICULUM_VITAE__SKILL_LEVELS:
+				return !getSkillLevels().isEmpty();
+			case CvPackage.CURRICULUM_VITAE__SKILLS:
+				return !getSkills().isEmpty();
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENTS:
+				return !getAccomplishments().isEmpty();
+			case CvPackage.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES:
+				return !getAccomplishmentTypes().isEmpty();
+			case CvPackage.CURRICULUM_VITAE__RESUMES:
+				return !getResumes().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

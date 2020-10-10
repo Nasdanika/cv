@@ -67,6 +67,69 @@ public interface CvFactory extends EFactory {
 	Comment createComment();
 
 	/**
+	 * Returns a new object of class '<em>Skill Level</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Skill Level</em>'.
+	 * @generated
+	 */
+	SkillLevel createSkillLevel();
+
+	/**
+	 * Returns a new object of class '<em>Skill Category</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Skill Category</em>'.
+	 * @generated
+	 */
+	SkillCategory createSkillCategory();
+
+	/**
+	 * Returns a new object of class '<em>Skill</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Skill</em>'.
+	 * @generated
+	 */
+	Skill createSkill();
+
+	/**
+	 * Returns a new object of class '<em>Skill Release</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Skill Release</em>'.
+	 * @generated
+	 */
+	SkillRelease createSkillRelease();
+
+	/**
+	 * Returns a new object of class '<em>Accomplishment Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Accomplishment Type</em>'.
+	 * @generated
+	 */
+	AccomplishmentType createAccomplishmentType();
+
+	/**
+	 * Returns a new object of class '<em>Accomplishment Category</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Accomplishment Category</em>'.
+	 * @generated
+	 */
+	AccomplishmentCategory createAccomplishmentCategory();
+
+	/**
+	 * Returns a new object of class '<em>Resume</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resume</em>'.
+	 * @generated
+	 */
+	Resume createResume();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -13,25 +13,25 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.nasdanika.cv.Accomplishment;
 import org.nasdanika.cv.CvFactory;
 import org.nasdanika.cv.CvPackage;
-import org.nasdanika.cv.Position;
-import org.nasdanika.ncore.provider.ModelElementItemProvider;
+import org.nasdanika.ncore.provider.EntityItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.nasdanika.cv.Position} object.
+ * This is the item provider adapter for a {@link org.nasdanika.cv.Accomplishment} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PositionItemProvider extends ModelElementItemProvider {
+public class AccomplishmentItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PositionItemProvider(AdapterFactory adapterFactory) {
+	public AccomplishmentItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,68 +46,51 @@ public class PositionItemProvider extends ModelElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addStartDatePropertyDescriptor(object);
-			addEndDatePropertyDescriptor(object);
-			addRolePropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
+			addAuthorityPropertyDescriptor(object);
 			addSkillsPropertyDescriptor(object);
+			addAccomplishmentIdPropertyDescriptor(object);
+			addUrlPropertyDescriptor(object);
+			addDatePropertyDescriptor(object);
+			addStartDatePropertyDescriptor(object);
+			addExpiresPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Start Date feature.
+	 * This adds a property descriptor for the Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected void addStartDatePropertyDescriptor(Object object) {
+	protected void addTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor(
 				 getResourceLocator(),
-				 getString("_UI_Position_startDate_feature"),
-				 CvPackage.Literals.POSITION__START_DATE,
+				 getString("_UI_Accomplishment_type_feature"),
+				 CvPackage.Literals.ACCOMPLISHMENT__TYPE,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the End Date feature.
+	 * This adds a property descriptor for the Authority feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected void addEndDatePropertyDescriptor(Object object) {
+	protected void addAuthorityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor(
 				 getResourceLocator(),
-				 getString("_UI_Position_endDate_feature"),
-				 CvPackage.Literals.POSITION__END_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Role feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addRolePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor(
-				 getResourceLocator(),
-				 getString("_UI_Position_role_feature"),
-				 CvPackage.Literals.POSITION__ROLE,
+				 getString("_UI_Accomplishment_authority_feature"),
+				 CvPackage.Literals.ACCOMPLISHMENT__AUTHORITY,
 				 true,
 				 false,
 				 true,
@@ -127,12 +110,117 @@ public class PositionItemProvider extends ModelElementItemProvider {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor(
 				 getResourceLocator(),
-				 getString("_UI_Position_skills_feature"),
-				 CvPackage.Literals.POSITION__SKILLS,
+				 getString("_UI_Accomplishment_skills_feature"),
+				 CvPackage.Literals.ACCOMPLISHMENT__SKILLS,
 				 true,
 				 false,
 				 true,
 				 null,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Accomplishment Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addAccomplishmentIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor(
+				 getResourceLocator(),
+				 getString("_UI_Accomplishment_accomplishmentId_feature"),
+				 CvPackage.Literals.ACCOMPLISHMENT__ACCOMPLISHMENT_ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor(
+				 getResourceLocator(),
+				 getString("_UI_Accomplishment_url_feature"),
+				 CvPackage.Literals.ACCOMPLISHMENT__URL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor(
+				 getResourceLocator(),
+				 getString("_UI_Accomplishment_date_feature"),
+				 CvPackage.Literals.ACCOMPLISHMENT__DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Start Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addStartDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor(
+				 getResourceLocator(),
+				 getString("_UI_Accomplishment_startDate_feature"),
+				 CvPackage.Literals.ACCOMPLISHMENT__START_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Expires feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected void addExpiresPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor(
+				 getResourceLocator(),
+				 getString("_UI_Accomplishment_expires_feature"),
+				 CvPackage.Literals.ACCOMPLISHMENT__EXPIRES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null,
 				 null));
@@ -150,7 +238,7 @@ public class PositionItemProvider extends ModelElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CvPackage.Literals.POSITION__ASSIGNMENTS);
+			childrenFeatures.add(CvPackage.Literals.ACCOMPLISHMENT_CATEGORY_ELEMENT__ELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -166,17 +254,6 @@ public class PositionItemProvider extends ModelElementItemProvider {
 		// adding (see {@link AddCommand}) it as a child.
 
 		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns Position.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Position"));
 	}
 
 	/**
@@ -197,10 +274,10 @@ public class PositionItemProvider extends ModelElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Position)object).getTitle();
+		String label = ((Accomplishment)object).getId();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Position_type") :
-			getString("_UI_Position_type") + " " + label;
+			getString("_UI_Accomplishment_type") :
+			getString("_UI_Accomplishment_type") + " " + label;
 	}
 
 
@@ -215,12 +292,15 @@ public class PositionItemProvider extends ModelElementItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Position.class)) {
-			case CvPackage.POSITION__START_DATE:
-			case CvPackage.POSITION__END_DATE:
+		switch (notification.getFeatureID(Accomplishment.class)) {
+			case CvPackage.ACCOMPLISHMENT__ACCOMPLISHMENT_ID:
+			case CvPackage.ACCOMPLISHMENT__URL:
+			case CvPackage.ACCOMPLISHMENT__DATE:
+			case CvPackage.ACCOMPLISHMENT__START_DATE:
+			case CvPackage.ACCOMPLISHMENT__EXPIRES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CvPackage.POSITION__ASSIGNMENTS:
+			case CvPackage.ACCOMPLISHMENT__ELEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -240,8 +320,8 @@ public class PositionItemProvider extends ModelElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CvPackage.Literals.POSITION__ASSIGNMENTS,
-				 CvFactory.eINSTANCE.createAssignment()));
+				(CvPackage.Literals.ACCOMPLISHMENT_CATEGORY_ELEMENT__ELEMENTS,
+				 CvFactory.eINSTANCE.createAccomplishmentCategory()));
 	}
 
 	/**

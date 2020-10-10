@@ -8,28 +8,29 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.nasdanika.cv.Assignment;
-import org.nasdanika.cv.CvPackage;
+
+import org.nasdanika.cv.SkillLevel;
+
 import org.nasdanika.ncore.provider.ModelElementItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.nasdanika.cv.Assignment} object.
+ * This is the item provider adapter for a {@link org.nasdanika.cv.SkillLevel} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AssignmentItemProvider extends ModelElementItemProvider {
+public class SkillLevelItemProvider extends ModelElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AssignmentItemProvider(AdapterFactory adapterFactory) {
+	public SkillLevelItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -44,85 +45,19 @@ public class AssignmentItemProvider extends ModelElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addStartDatePropertyDescriptor(object);
-			addEndDatePropertyDescriptor(object);
-			addSkillsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Start Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addStartDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor(
-				 getResourceLocator(),
-				 getString("_UI_Assignment_startDate_feature"),
-				 CvPackage.Literals.ASSIGNMENT__START_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the End Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addEndDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor(
-				 getResourceLocator(),
-				 getString("_UI_Assignment_endDate_feature"),
-				 CvPackage.Literals.ASSIGNMENT__END_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Skills feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addSkillsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor(
-				 getResourceLocator(),
-				 getString("_UI_Assignment_skills_feature"),
-				 CvPackage.Literals.ASSIGNMENT__SKILLS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns Assignment.gif.
+	 * This returns SkillLevel.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Assignment"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SkillLevel"));
 	}
 
 	/**
@@ -143,10 +78,10 @@ public class AssignmentItemProvider extends ModelElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Assignment)object).getTitle();
+		String label = ((SkillLevel)object).getTitle();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Assignment_type") :
-			getString("_UI_Assignment_type") + " " + label;
+			getString("_UI_SkillLevel_type") :
+			getString("_UI_SkillLevel_type") + " " + label;
 	}
 
 
@@ -160,13 +95,6 @@ public class AssignmentItemProvider extends ModelElementItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Assignment.class)) {
-			case CvPackage.ASSIGNMENT__START_DATE:
-			case CvPackage.ASSIGNMENT__END_DATE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

@@ -61,6 +61,13 @@ public class CvFactoryImpl extends EFactoryImpl implements CvFactory {
 			case CvPackage.POSITION: return createPosition();
 			case CvPackage.ASSIGNMENT: return createAssignment();
 			case CvPackage.COMMENT: return createComment();
+			case CvPackage.SKILL_LEVEL: return createSkillLevel();
+			case CvPackage.SKILL_CATEGORY: return createSkillCategory();
+			case CvPackage.SKILL: return createSkill();
+			case CvPackage.SKILL_RELEASE: return createSkillRelease();
+			case CvPackage.ACCOMPLISHMENT_TYPE: return createAccomplishmentType();
+			case CvPackage.ACCOMPLISHMENT_CATEGORY: return createAccomplishmentCategory();
+			case CvPackage.RESUME: return createResume();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -119,6 +126,83 @@ public class CvFactoryImpl extends EFactoryImpl implements CvFactory {
 	public Comment createComment() {
 		CommentImpl comment = new CommentImpl();
 		return comment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SkillLevel createSkillLevel() {
+		SkillLevelImpl skillLevel = new SkillLevelImpl();
+		return skillLevel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SkillCategory createSkillCategory() {
+		SkillCategoryImpl skillCategory = new SkillCategoryImpl();
+		return skillCategory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Skill createSkill() {
+		SkillImpl skill = new SkillImpl();
+		return skill;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SkillRelease createSkillRelease() {
+		SkillReleaseImpl skillRelease = new SkillReleaseImpl();
+		return skillRelease;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AccomplishmentType createAccomplishmentType() {
+		AccomplishmentTypeImpl accomplishmentType = new AccomplishmentTypeImpl();
+		return accomplishmentType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AccomplishmentCategory createAccomplishmentCategory() {
+		AccomplishmentCategoryImpl accomplishmentCategory = new AccomplishmentCategoryImpl();
+		return accomplishmentCategory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Resume createResume() {
+		ResumeImpl resume = new ResumeImpl();
+		return resume;
 	}
 
 	/**

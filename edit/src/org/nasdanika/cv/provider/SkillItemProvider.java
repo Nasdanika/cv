@@ -11,27 +11,26 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.nasdanika.cv.CvFactory;
 import org.nasdanika.cv.CvPackage;
-import org.nasdanika.cv.Position;
-import org.nasdanika.ncore.provider.ModelElementItemProvider;
+import org.nasdanika.cv.Skill;
+import org.nasdanika.ncore.provider.EntityItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.nasdanika.cv.Position} object.
+ * This is the item provider adapter for a {@link org.nasdanika.cv.Skill} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PositionItemProvider extends ModelElementItemProvider {
+public class SkillItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PositionItemProvider(AdapterFactory adapterFactory) {
+	public SkillItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,89 +45,23 @@ public class PositionItemProvider extends ModelElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addStartDatePropertyDescriptor(object);
-			addEndDatePropertyDescriptor(object);
-			addRolePropertyDescriptor(object);
-			addSkillsPropertyDescriptor(object);
+			addLevelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Start Date feature.
+	 * This adds a property descriptor for the Level feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected void addStartDatePropertyDescriptor(Object object) {
+	protected void addLevelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor(
 				 getResourceLocator(),
-				 getString("_UI_Position_startDate_feature"),
-				 CvPackage.Literals.POSITION__START_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the End Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addEndDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor(
-				 getResourceLocator(),
-				 getString("_UI_Position_endDate_feature"),
-				 CvPackage.Literals.POSITION__END_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Role feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addRolePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor(
-				 getResourceLocator(),
-				 getString("_UI_Position_role_feature"),
-				 CvPackage.Literals.POSITION__ROLE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Skills feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addSkillsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor(
-				 getResourceLocator(),
-				 getString("_UI_Position_skills_feature"),
-				 CvPackage.Literals.POSITION__SKILLS,
+				 getString("_UI_Skill_level_feature"),
+				 CvPackage.Literals.SKILL__LEVEL,
 				 true,
 				 false,
 				 true,
@@ -150,7 +83,7 @@ public class PositionItemProvider extends ModelElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CvPackage.Literals.POSITION__ASSIGNMENTS);
+			childrenFeatures.add(CvPackage.Literals.SKILL_CATEGORY_ELEMENT__ELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -169,17 +102,6 @@ public class PositionItemProvider extends ModelElementItemProvider {
 	}
 
 	/**
-	 * This returns Position.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Position"));
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -193,14 +115,14 @@ public class PositionItemProvider extends ModelElementItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Position)object).getTitle();
+		String label = ((Skill)object).getTitle();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Position_type") :
-			getString("_UI_Position_type") + " " + label;
+			getString("_UI_Skill_type") :
+			getString("_UI_Skill_type") + " " + label;
 	}
 
 
@@ -215,12 +137,8 @@ public class PositionItemProvider extends ModelElementItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Position.class)) {
-			case CvPackage.POSITION__START_DATE:
-			case CvPackage.POSITION__END_DATE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case CvPackage.POSITION__ASSIGNMENTS:
+		switch (notification.getFeatureID(Skill.class)) {
+			case CvPackage.SKILL__ELEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -240,8 +158,18 @@ public class PositionItemProvider extends ModelElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CvPackage.Literals.POSITION__ASSIGNMENTS,
-				 CvFactory.eINSTANCE.createAssignment()));
+				(CvPackage.Literals.SKILL_CATEGORY_ELEMENT__ELEMENTS,
+				 CvFactory.eINSTANCE.createSkillCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.SKILL_CATEGORY_ELEMENT__ELEMENTS,
+				 CvFactory.eINSTANCE.createSkill()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.SKILL_CATEGORY_ELEMENT__ELEMENTS,
+				 CvFactory.eINSTANCE.createSkillRelease()));
 	}
 
 	/**

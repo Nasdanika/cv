@@ -18,6 +18,7 @@ import org.nasdanika.cv.Assignment;
 import org.nasdanika.cv.CvPackage;
 import org.nasdanika.cv.Position;
 
+import org.nasdanika.cv.Skill;
 import org.nasdanika.ncore.impl.ModelElementImpl;
 
 import org.nasdanika.party.Role;
@@ -34,6 +35,7 @@ import org.nasdanika.party.Role;
  *   <li>{@link org.nasdanika.cv.impl.PositionImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link org.nasdanika.cv.impl.PositionImpl#getRole <em>Role</em>}</li>
  *   <li>{@link org.nasdanika.cv.impl.PositionImpl#getAssignments <em>Assignments</em>}</li>
+ *   <li>{@link org.nasdanika.cv.impl.PositionImpl#getSkills <em>Skills</em>}</li>
  * </ul>
  *
  * @generated
@@ -163,6 +165,17 @@ public class PositionImpl extends ModelElementImpl implements Position {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Skill> getSkills() {
+		return (EList<Skill>)eDynamicGet(CvPackage.POSITION__SKILLS, CvPackage.Literals.POSITION__SKILLS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -189,6 +202,8 @@ public class PositionImpl extends ModelElementImpl implements Position {
 				return basicGetRole();
 			case CvPackage.POSITION__ASSIGNMENTS:
 				return getAssignments();
+			case CvPackage.POSITION__SKILLS:
+				return getSkills();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -215,6 +230,10 @@ public class PositionImpl extends ModelElementImpl implements Position {
 				getAssignments().clear();
 				getAssignments().addAll((Collection<? extends Assignment>)newValue);
 				return;
+			case CvPackage.POSITION__SKILLS:
+				getSkills().clear();
+				getSkills().addAll((Collection<? extends Skill>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -239,6 +258,9 @@ public class PositionImpl extends ModelElementImpl implements Position {
 			case CvPackage.POSITION__ASSIGNMENTS:
 				getAssignments().clear();
 				return;
+			case CvPackage.POSITION__SKILLS:
+				getSkills().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -259,6 +281,8 @@ public class PositionImpl extends ModelElementImpl implements Position {
 				return basicGetRole() != null;
 			case CvPackage.POSITION__ASSIGNMENTS:
 				return !getAssignments().isEmpty();
+			case CvPackage.POSITION__SKILLS:
+				return !getSkills().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

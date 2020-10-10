@@ -27,6 +27,7 @@ import org.nasdanika.party.Role;
  *   <li>{@link org.nasdanika.cv.Position#getEndDate <em>End Date</em>}</li>
  *   <li>{@link org.nasdanika.cv.Position#getRole <em>Role</em>}</li>
  *   <li>{@link org.nasdanika.cv.Position#getAssignments <em>Assignments</em>}</li>
+ *   <li>{@link org.nasdanika.cv.Position#getSkills <em>Skills</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.cv.CvPackage#getPosition()
@@ -120,5 +121,20 @@ public interface Position extends ModelElement {
 	 * @generated
 	 */
 	EList<Assignment> getAssignments();
+
+	/**
+	 * Returns the value of the '<em><b>Skills</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.cv.Skill}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Skills associated with this accomplishment.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Skills</em>' reference list.
+	 * @see org.nasdanika.cv.CvPackage#getPosition_Skills()
+	 * @model
+	 * @generated
+	 */
+	EList<Skill> getSkills();
 
 } // Position
