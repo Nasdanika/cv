@@ -36,7 +36,7 @@ import org.nasdanika.party.Party;
  * </ul>
  *
  * @see org.nasdanika.cv.CvPackage#getAccomplishment()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface Accomplishment extends Entity, AccomplishmentCategoryElement {

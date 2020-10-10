@@ -154,6 +154,11 @@ public class AccomplishmentCategoryItemProvider extends ModelElementItemProvider
 			(createChildParameter
 				(CvPackage.Literals.ACCOMPLISHMENT_CATEGORY_ELEMENT__ELEMENTS,
 				 CvFactory.eINSTANCE.createAccomplishmentCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.ACCOMPLISHMENT_CATEGORY_ELEMENT__ELEMENTS,
+				 CvFactory.eINSTANCE.createAccomplishment()));
 	}
 
 	/**

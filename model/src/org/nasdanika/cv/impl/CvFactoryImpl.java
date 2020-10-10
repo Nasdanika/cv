@@ -67,6 +67,7 @@ public class CvFactoryImpl extends EFactoryImpl implements CvFactory {
 			case CvPackage.SKILL_RELEASE: return createSkillRelease();
 			case CvPackage.ACCOMPLISHMENT_TYPE: return createAccomplishmentType();
 			case CvPackage.ACCOMPLISHMENT_CATEGORY: return createAccomplishmentCategory();
+			case CvPackage.ACCOMPLISHMENT: return createAccomplishment();
 			case CvPackage.RESUME: return createResume();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -192,6 +193,17 @@ public class CvFactoryImpl extends EFactoryImpl implements CvFactory {
 	public AccomplishmentCategory createAccomplishmentCategory() {
 		AccomplishmentCategoryImpl accomplishmentCategory = new AccomplishmentCategoryImpl();
 		return accomplishmentCategory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Accomplishment createAccomplishment() {
+		AccomplishmentImpl accomplishment = new AccomplishmentImpl();
+		return accomplishment;
 	}
 
 	/**

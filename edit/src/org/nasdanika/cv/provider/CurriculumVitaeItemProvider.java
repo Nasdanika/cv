@@ -236,6 +236,11 @@ public class CurriculumVitaeItemProvider extends PersonItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENTS,
+				 CvFactory.eINSTANCE.createAccomplishment()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(CvPackage.Literals.CURRICULUM_VITAE__ACCOMPLISHMENT_TYPES,
 				 CvFactory.eINSTANCE.createAccomplishmentType()));
 

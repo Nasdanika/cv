@@ -45,7 +45,7 @@ import org.nasdanika.party.Party;
  *
  * @generated
  */
-public abstract class AccomplishmentImpl extends EntityImpl implements Accomplishment {
+public class AccomplishmentImpl extends EntityImpl implements Accomplishment {
 	/**
 	 * The default value of the '{@link #getAccomplishmentId() <em>Accomplishment Id</em>}' attribute.
 	 * <!-- begin-user-doc -->

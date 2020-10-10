@@ -877,7 +877,7 @@ public class CvPackageImpl extends EPackageImpl implements CvPackage {
 
 		initEClass(accomplishmentCategoryEClass, AccomplishmentCategory.class, "AccomplishmentCategory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(accomplishmentEClass, Accomplishment.class, "Accomplishment", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(accomplishmentEClass, Accomplishment.class, "Accomplishment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAccomplishment_Type(), this.getAccomplishmentType(), null, "type", null, 0, 1, Accomplishment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAccomplishment_Authority(), thePartyPackage.getParty(), null, "authority", null, 0, 1, Accomplishment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAccomplishment_Skills(), this.getSkill(), null, "skills", null, 0, -1, Accomplishment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

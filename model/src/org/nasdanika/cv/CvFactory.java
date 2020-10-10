@@ -121,6 +121,15 @@ public interface CvFactory extends EFactory {
 	AccomplishmentCategory createAccomplishmentCategory();
 
 	/**
+	 * Returns a new object of class '<em>Accomplishment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Accomplishment</em>'.
+	 * @generated
+	 */
+	Accomplishment createAccomplishment();
+
+	/**
 	 * Returns a new object of class '<em>Resume</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

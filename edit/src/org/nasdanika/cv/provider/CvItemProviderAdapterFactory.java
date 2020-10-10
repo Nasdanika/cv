@@ -325,6 +325,29 @@ public class CvItemProviderAdapterFactory extends CvAdapterFactory implements Co
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.Accomplishment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AccomplishmentItemProvider accomplishmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.cv.Accomplishment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAccomplishmentAdapter() {
+		if (accomplishmentItemProvider == null) {
+			accomplishmentItemProvider = new AccomplishmentItemProvider(this);
+		}
+
+		return accomplishmentItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.nasdanika.cv.Resume} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -463,6 +486,7 @@ public class CvItemProviderAdapterFactory extends CvAdapterFactory implements Co
 		if (skillReleaseItemProvider != null) skillReleaseItemProvider.dispose();
 		if (accomplishmentTypeItemProvider != null) accomplishmentTypeItemProvider.dispose();
 		if (accomplishmentCategoryItemProvider != null) accomplishmentCategoryItemProvider.dispose();
+		if (accomplishmentItemProvider != null) accomplishmentItemProvider.dispose();
 		if (resumeItemProvider != null) resumeItemProvider.dispose();
 	}
 

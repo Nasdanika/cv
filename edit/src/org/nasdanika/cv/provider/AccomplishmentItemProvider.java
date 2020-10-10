@@ -322,6 +322,11 @@ public class AccomplishmentItemProvider extends EntityItemProvider {
 			(createChildParameter
 				(CvPackage.Literals.ACCOMPLISHMENT_CATEGORY_ELEMENT__ELEMENTS,
 				 CvFactory.eINSTANCE.createAccomplishmentCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.ACCOMPLISHMENT_CATEGORY_ELEMENT__ELEMENTS,
+				 CvFactory.eINSTANCE.createAccomplishment()));
 	}
 
 	/**
