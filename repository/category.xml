@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.nasdanika.cv.feature_0.1.0.qualifier.jar" id="org.nasdanika.cv.feature" version="0.1.0.qualifier">
+   <feature url="features/org.nasdanika.cv.feature_2021.3.0.qualifier.jar" id="org.nasdanika.cv.feature" version="2021.3.0.qualifier">
       <category name="org.nasdanika.cv.category"/>
    </feature>
    <category-def name="org.nasdanika.cv.category" label="Nasdanika CV">
