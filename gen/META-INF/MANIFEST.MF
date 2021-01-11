@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Nasdanika Vinci action generation adapters for CV model elements
 Bundle-SymbolicName: org.nasdanika.cv.gen;singleton:=true
-Bundle-Version: 2020.12.0.qualifier
+Bundle-Version: 2021.1.0.qualifier
 Bundle-Vendor: Nasdanika
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.emf.ecore,
